@@ -15,6 +15,16 @@
 */
 
 
+// setting up a new object date object
+var thisDate = new Date("October 12, 2018");
+// making that object into a string
+var dateString = thisDate.toLocaleString();
+var dateHTML = "<h2>" + dateString + "</h2>";
+// getting the specific day of the date
+var thisDay = thisDate.getDay();
+// running the getEvent function using thisDay as a parameter
+var eventHTML = getEvent(thisDay);
+document.getElementById("unionToday").insertAdjacentHTML('beforeEnd', dateHTML + eventHTML);
 
 function getEvent(day) {
    var eventHTML;
